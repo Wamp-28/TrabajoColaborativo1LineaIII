@@ -10,18 +10,19 @@ public class Main {
 
         do {
             System.out.println("\n=== CALCULADORA COLABORATIVA ===");
-            System.out.println("1) Sumar");
-            System.out.println("2) Restar");
-            System.out.println("3) Multiplicar");
-            System.out.println("4) Dividir");
-            System.out.println("5) Potencia");
+            System.out.println("1) CALCULAR seno y coseno 3 aleatorios ");
+            System.out.println("2) Calcular logaritmo, tangente, arseno y arconseno de 3 numeros aleatorios");
+            System.out.println("3) Calcular la suma de los primeros 50 impares ");
+            System.out.println("4) Calcular la suma de los primeros 50 pares ");
+            System.out.println("5) Potencia de 2 numeros aleatorios 1 - 100");
             System.out.println("6) Raíz cuadrada");
-            System.out.println("7) Par o impar");
-            System.out.println("8) Mayor de dos números");
-            System.out.println("9) Menor de dos números");
-            System.out.println("10) Tabla de multiplicar");
-            System.out.println("11) Área de un rectángulo");
-            System.out.println("12) Salir");
+            System.out.println("7) Par o impar de un numero aleatorio entre 1 y 100 ");
+            System.out.println("8) Mayor de tres números aleatorios 1 - 200");
+            System.out.println("9) Menor de cuatro números impares aleatorios 1 - 100");
+            System.out.println("10) Tabla de multiplicar del 1 al 20");
+            System.out.println("11) Ejercicio de adivinar numero aleatorio con 3 intentos ");
+            System.out.println("12) Ejercicios dado ganador de 10 rondas ");
+            System.out.println("13) Salir");
             System.out.print("Elija opción: ");
             opcion = sc.nextInt();
 
@@ -60,11 +61,14 @@ public class Main {
 
                     break;
                 case 12: // Estudiante 12
+
+                    break;
+                case 13:
                     System.out.println("Saliendo...");
                     break;
                 default:
                     System.out.println("Opción no válida");
             }
-        } while (opcion != 12);
+        } while (opcion != 13);
     }
 }
