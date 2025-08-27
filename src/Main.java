@@ -1,5 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -67,6 +68,25 @@ public class Main {
                     }
                     break;
                 case 8: // Estudiante 8
+                    System.out.println("8) Mayor de tres números aleatorios 1 - 200");
+                    int num1, num2, num3, mayor;
+                    Random random = new Random();
+                    //Genera un numero aleatorio entre 1 y 200
+                    num1 = random.nextInt(200)+1;
+                    num2 = random.nextInt(200)+1;
+                    num3 = random.nextInt(200)+1;
+                    System.out.println("El número 1 es = "+num1+"\nEl número 2 es = "+num2+"\nEl número 3 es = "+ num3);
+
+                    if (num1 >= num2 && num1 >= num3) {
+                        mayor = num1;
+                    } else if (num2 >= num1 && num2 >= num3) {
+                        mayor = num2;
+                    } else {
+                        mayor = num3;
+                    }
+
+                    System.out.println("El número mayor es: "+ mayor);
+
 
 
 
