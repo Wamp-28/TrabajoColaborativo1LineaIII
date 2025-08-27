@@ -1,10 +1,13 @@
 import java.util.Random;
 import java.util.Scanner;
 
+<<<<<<< HEAD
+=======
 import java.lang.Math;
 
 import java.util.*;
 
+>>>>>>> 8eddbfd5fb548a327c4c3989a2da0cbda05bbe0a
 
 public class Main {
     public static void main(String[] args) {
@@ -39,7 +42,29 @@ public class Main {
             opcion = sc.nextInt();
 
             switch (opcion) {
-                case 1: // Estudiante 1
+                case 1: //
+
+                    Random aleatorio = new Random();
+
+                    int n1 = aleatorio.nextInt();
+                    int n2 = aleatorio.nextInt();
+                    int n3 = aleatorio.nextInt();
+
+                    double senN1 = Math.sin(n1);
+                    double senN2 = Math.sin(n2);
+                    double senN3 = Math.sin(n3);
+
+                    double cosN1 = Math.cos(n1);
+                    double cosN2 = Math.cos(n2);
+                    double cosN13 = Math.cos(n3);
+
+                    System.out.println("Seno para " + n1 + ": " +senN1);
+                    System.out.println("Seno para " + n2 + ": " +senN1);
+                    System.out.println("Seno para " + n3 + ": " +senN1);
+
+                    System.out.println("cos para " + n1 + ": " +senN1);
+                    System.out.println("cos para " + n2 + ": " +senN1);
+                    System.out.println("cos para " + n3 + ": " +senN1);
 
                     break;
                 case 2: // Estudiante 2
