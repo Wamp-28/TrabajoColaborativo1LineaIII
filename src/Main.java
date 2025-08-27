@@ -1,9 +1,10 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-     // Por estudiante: feature/XX-nombreTarea, con XX de 01 a 12.
+        // Por estudiante: feature/XX-nombreTarea, con XX de 01 a 12.
 
         Scanner sc = new Scanner(System.in);
         int opcion;
@@ -52,8 +53,43 @@ public class Main {
 
                     break;
                 case 9: // Estudiante 9
+                    Random random = new Random();
+                    int numeroAleatorioUno = random.nextInt(100) + 1;
+                    int numeroAleatorioDos = random.nextInt(100) + 1;
+                    int numeroAleatorioTres = random.nextInt(100) + 1;
+                    int numeroAleatorioCuatro = random.nextInt(100) + 1;
+                    while (numeroAleatorioUno % 2 == 0) {
+                        numeroAleatorioUno = random.nextInt(100) + 1;
+                    }
+                    while (numeroAleatorioDos % 2 == 0) {
 
-                    break;
+                        numeroAleatorioDos = random.nextInt(100) + 1;
+                    }
+                    while (numeroAleatorioTres % 2 == 0) {
+
+                        numeroAleatorioTres = random.nextInt(100) + 1;
+                    }
+                    while (numeroAleatorioCuatro % 2 == 0) {
+
+                        numeroAleatorioCuatro = random.nextInt(100) + 1;
+                    }
+
+                    System.out.println("Numeros aleatorios: " + numeroAleatorioUno + ", " + numeroAleatorioDos + ", " + numeroAleatorioTres + ", " + numeroAleatorioCuatro);
+                    int menor;
+
+                    if (numeroAleatorioUno < numeroAleatorioDos && numeroAleatorioUno < numeroAleatorioTres && numeroAleatorioUno < numeroAleatorioCuatro){
+                        menor = numeroAleatorioCuatro;
+                    } else if (numeroAleatorioDos < numeroAleatorioUno && numeroAleatorioDos < numeroAleatorioTres && numeroAleatorioDos < numeroAleatorioCuatro) {
+                        menor = numeroAleatorioDos;
+                    } else if (numeroAleatorioTres < numeroAleatorioUno && numeroAleatorioTres < numeroAleatorioDos && numeroAleatorioTres < numeroAleatorioCuatro) {
+                        menor = numeroAleatorioTres;
+                    } else {
+                        menor = numeroAleatorioCuatro;
+                    }
+
+                    System.out.println("El numero impar menor es: " + menor);
+
+                break;
                 case 10: // Estudiante 10
 
                     break;
@@ -69,6 +105,7 @@ public class Main {
                 default:
                     System.out.println("Opción no válida");
             }
-        } while (opcion != 13);
+        }
+        while (opcion != 13);
     }
 }
