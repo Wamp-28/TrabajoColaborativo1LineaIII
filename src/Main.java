@@ -48,8 +48,19 @@ public class Main {
                     break;
                 case 7: // Estudiante 7
 
+                    Random random = new Random();
+                    int numero = random.nextInt(100) + 1;
+                    System.out.println("El número generado es: " + numero);
+
+                    if (numero % 2 == 0) {
+                        System.out.println("El número es PAR.");
+                    } else {
+                        System.out.println("El número es IMPAR.");
+                    }
                     break;
                 case 8: // Estudiante 8
+
+
 
                     break;
                 case 9: // Estudiante 9
