@@ -50,12 +50,29 @@ public class Main {
                     System.out.println("la suma de los primeros 50 pares es : " + suma);
                     break;
                 case 5: // Estudiante 5
+                    System.out.println("OPCIÓN 5: Potencia de 2 números aleatorios 1 - 100");
+                    Random aleatorio = new Random();
+                    int n1;
+                    int n2;
+                    int min = 1;
+                    int max = 100;
+
+                    // Genera los números aleatorios
+                    n1 = aleatorio.nextInt(max - min + 1) + min;
+                    n2 = aleatorio.nextInt(max - min + 1) + min;
+
+                    // Calcula el resultado de la potencia entre los 2 números aleatorios
+                    double resultado = Math.pow (n1, n2);
+
+                    // Imprime la potencia de n1 a la n2, indicando el número generado aleatoriamente y el resultado
+                    System.out.println("Número aleatorio 1: " + n1 + "\n Número aleatorio 2: " + n2 + "\n Resultado: " + resultado);
 
                     break;
                 case 6: // Estudiante 6
 
                     break;
                 case 7: // Estudiante 7
+
 
                     Random random = new Random();
                     int numero = random.nextInt(100) + 1;
@@ -66,6 +83,7 @@ public class Main {
                     } else {
                         System.out.println("El número es IMPAR.");
                     }
+
                     break;
                 case 8: // Estudiante 8
                     System.out.println("8) Mayor de tres números aleatorios 1 - 200");
