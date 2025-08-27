@@ -17,6 +17,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         Random aleatorio = new Random();
+        Random random = new Random();
         int opcion;
 
         do {
@@ -83,7 +84,7 @@ public class Main {
                     break;
                 case 5: // Estudiante 5
                     System.out.println("OPCIÓN 5: Potencia de 2 números aleatorios 1 - 100");
-                    Random aleatorio = new Random();
+
                     int n1;
                     int n2;
                     int min = 1;
@@ -105,8 +106,6 @@ public class Main {
                     break;
                 case 7: // Estudiante 7
 
-
-                    Random random = new Random();
                     int numero = random.nextInt(100) + 1;
                     System.out.println("El número generado es: " + numero);
 
@@ -119,20 +118,20 @@ public class Main {
                     break;
                 case 8: // Estudiante 8
                     System.out.println("8) Mayor de tres números aleatorios 1 - 200");
-                    int num1, num2, num3, mayor;
-                    Random random = new Random();
-                    //Genera un numero aleatorio entre 1 y 200
-                    num1 = random.nextInt(200)+1;
-                    num2 = random.nextInt(200)+1;
-                    num3 = random.nextInt(200)+1;
-                    System.out.println("El número 1 es = "+num1+"\nEl número 2 es = "+num2+"\nEl número 3 es = "+ num3);
+                    int nume1, nume2, nume3, mayor;
 
-                    if (num1 >= num2 && num1 >= num3) {
-                        mayor = num1;
-                    } else if (num2 >= num1 && num2 >= num3) {
-                        mayor = num2;
+                    //Genera un numero aleatorio entre 1 y 200
+                    nume1 = random.nextInt(200)+1;
+                    nume2 = random.nextInt(200)+1;
+                    nume3 = random.nextInt(200)+1;
+                    System.out.println("El número 1 es = "+nume1+"\nEl número 2 es = "+nume2+"\nEl número 3 es = "+ nume3);
+
+                    if (nume1 >= nume2 && nume1 >= nume3) {
+                        mayor = nume1;
+                    } else if (nume2 >= nume1 && nume2 >= nume3) {
+                        mayor = nume2;
                     } else {
-                        mayor = num3;
+                        mayor = nume3;
                     }
 
                     System.out.println("El número mayor es: "+ mayor);
@@ -142,7 +141,7 @@ public class Main {
 
                     break;
                 case 9: // Estudiante 9
-                    Random random = new Random();
+
                     int numeroAleatorioUno = random.nextInt(100) + 1;
                     int numeroAleatorioDos = random.nextInt(100) + 1;
                     int numeroAleatorioTres = random.nextInt(100) + 1;
@@ -193,13 +192,12 @@ public class Main {
 
                     break;
                 case 12: // Estudiante 12
-                    int min=1;
-                    int max=6;
+
                     int numeroMayor=0;
-                    Random aleatorio = new Random();
+
                     for (int i=1; i<=10; i++)
                     {
-                        int n= aleatorio.nextInt(max-min)+(1)+min;
+                        int n= aleatorio.nextInt(6-1)+(1)+1;
                         System.out.println("Resultado del tiro del dado "+n);
                         if (n>numeroMayor)
                         {
