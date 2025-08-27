@@ -73,7 +73,18 @@ public class Main {
 
                     break;
                 case 3: // Estudiante 3
+                    int contador = 0;
+                    int numero = 1;
 
+                    System.out.println("Los primeros 50 números impares son:");
+
+                    while (contador < 50) {
+                        if (numero % 2 != 0) {
+                            System.out.println(numero);
+                            contador++;
+                        }
+                        numero++;
+                    }
                     break;
                 case 4: // Miguel Gañan
                     int suma = 0;
