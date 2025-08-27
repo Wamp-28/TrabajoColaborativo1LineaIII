@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -58,6 +59,45 @@ public class Main {
 
                     break;
                 case 11: // Estudiante 11
+
+
+
+                    int i = 0;
+                    int num;
+                    int  n;
+
+                    Random aleatorioo = new Random();
+
+                    n = aleatorioo.nextInt((60-1)+1) + 1;
+
+                    System.out.println("escoje 3 diferentes numeros");
+                    for (int i = 1; i <= 3; i++)
+                    {
+                        System.out.println("ingrese el primer numero");
+                        num = sc.nextInt();
+                      if ( num<n){
+                          System.out.println("el numero esmayor");
+                    } else if ( num>n) {
+                          System.out.println("el numero es menor");
+
+
+
+                      }
+                      else {
+                          System.out.println("adivinaste");
+                      }
+
+                    }
+
+
+
+
+
+
+
+
+
+
 
                     break;
                 case 12: // Estudiante 12
