@@ -115,6 +115,22 @@ public class Main {
 
                     break;
                 case 12: // Estudiante 12
+                    int min=1;
+                    int max=6;
+                    int numeroMayor=0;
+                    Random aleatorio = new Random();
+                    for (int i=1; i<=10; i++)
+                    {
+                        int n= aleatorio.nextInt(max-min)+(1)+min;
+                        System.out.println("Resultado del tiro del dado "+n);
+                        if (n>numeroMayor)
+                        {
+                            numeroMayor=n;
+                        }
+
+                    }
+
+                    System.out.println("El numero ganador es : "+numeroMayor );
 
                     break;
                 case 13:
