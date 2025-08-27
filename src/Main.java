@@ -1,9 +1,14 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
+ 
      // Por Miguel: feature/04-primeros50pares
+
+        // Por estudiante: feature/XX-nombreTarea, con XX de 01 a 12.
+ 
 
         Scanner sc = new Scanner(System.in);
         int opcion;
@@ -51,20 +56,89 @@ public class Main {
                     break;
                 case 7: // Estudiante 7
 
+                    Random random = new Random();
+                    int numero = random.nextInt(100) + 1;
+                    System.out.println("El número generado es: " + numero);
+
+                    if (numero % 2 == 0) {
+                        System.out.println("El número es PAR.");
+                    } else {
+                        System.out.println("El número es IMPAR.");
+                    }
                     break;
                 case 8: // Estudiante 8
 
+
+
                     break;
                 case 9: // Estudiante 9
+                    Random random = new Random();
+                    int numeroAleatorioUno = random.nextInt(100) + 1;
+                    int numeroAleatorioDos = random.nextInt(100) + 1;
+                    int numeroAleatorioTres = random.nextInt(100) + 1;
+                    int numeroAleatorioCuatro = random.nextInt(100) + 1;
+                    while (numeroAleatorioUno % 2 == 0) {
+                        numeroAleatorioUno = random.nextInt(100) + 1;
+                    }
+                    while (numeroAleatorioDos % 2 == 0) {
 
-                    break;
+                        numeroAleatorioDos = random.nextInt(100) + 1;
+                    }
+                    while (numeroAleatorioTres % 2 == 0) {
+
+                        numeroAleatorioTres = random.nextInt(100) + 1;
+                    }
+                    while (numeroAleatorioCuatro % 2 == 0) {
+
+                        numeroAleatorioCuatro = random.nextInt(100) + 1;
+                    }
+
+                    System.out.println("Numeros aleatorios: " + numeroAleatorioUno + ", " + numeroAleatorioDos + ", " + numeroAleatorioTres + ", " + numeroAleatorioCuatro);
+                    int menor;
+
+                    if (numeroAleatorioUno < numeroAleatorioDos && numeroAleatorioUno < numeroAleatorioTres && numeroAleatorioUno < numeroAleatorioCuatro){
+                        menor = numeroAleatorioCuatro;
+                    } else if (numeroAleatorioDos < numeroAleatorioUno && numeroAleatorioDos < numeroAleatorioTres && numeroAleatorioDos < numeroAleatorioCuatro) {
+                        menor = numeroAleatorioDos;
+                    } else if (numeroAleatorioTres < numeroAleatorioUno && numeroAleatorioTres < numeroAleatorioDos && numeroAleatorioTres < numeroAleatorioCuatro) {
+                        menor = numeroAleatorioTres;
+                    } else {
+                        menor = numeroAleatorioCuatro;
+                    }
+
+                    System.out.println("El numero impar menor es: " + menor);
+
+                break;
                 case 10: // Estudiante 10
-
+                    System.out.println("Tabla de multiplicar del 1 al 20");
+                    for(int i=1; i<=20; i++) {
+                        System.out.println("\nTabla de: " + i);
+                        for (int j=1; j<=10; j++) {
+                            int result = i * j;
+                            System.out.println(i + " * " + j + " = " + result);
+                        }
+                    }
                     break;
                 case 11: // Estudiante 11
 
                     break;
                 case 12: // Estudiante 12
+                    int min=1;
+                    int max=6;
+                    int numeroMayor=0;
+                    Random aleatorio = new Random();
+                    for (int i=1; i<=10; i++)
+                    {
+                        int n= aleatorio.nextInt(max-min)+(1)+min;
+                        System.out.println("Resultado del tiro del dado "+n);
+                        if (n>numeroMayor)
+                        {
+                            numeroMayor=n;
+                        }
+
+                    }
+
+                    System.out.println("El numero ganador es : "+numeroMayor );
 
                     break;
                 case 13:
@@ -73,6 +147,7 @@ public class Main {
                 default:
                     System.out.println("Opción no válida");
             }
-        } while (opcion != 13);
+        }
+        while (opcion != 13);
     }
 }
