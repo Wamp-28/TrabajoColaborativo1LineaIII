@@ -1,4 +1,6 @@
+import java.util.Random;
 import java.util.Scanner;
+import java.lang.Math;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,6 +8,7 @@ public class Main {
      // Por estudiante: feature/XX-nombreTarea, con XX de 01 a 12.
 
         Scanner sc = new Scanner(System.in);
+        Random aleatorio = new Random();
         int opcion;
 
         do {
@@ -31,6 +34,33 @@ public class Main {
 
                     break;
                 case 2: // Estudiante 2
+                    int num, num1, num2, num3;
+                    for (int i=1; i<=3; i++) {
+                        num = aleatorio.nextInt(101-1);
+                        num1 = aleatorio.nextInt(101-1);
+                        num2 = aleatorio.nextInt(101-1);
+                        num3 = aleatorio.nextInt(101-1);
+                        //
+                        System.out.println(num);
+                        //logaritmo
+                        double logaritmo = Math.log(num);
+                        System.out.println("Logaritmo: "+num);
+                        //tangente
+                        double tangente = Math.tan(num1);
+                        System.out.println("Tangente: "+tangente);
+                        //arse
+                        double arseno = Math.asin(num2);
+                        double radianes = Math.toRadians(arseno);
+                        System.out.println("Arcoseno: "+radianes);
+
+
+                        //arcos
+                        double arcocoseno = Math.acos(num3);
+                        double radianes2 = Math.toRadians(arcocoseno);
+                        System.out.println("Radianes: "+radianes2);
+                        System.out.println("Arcocoseno: "+radianes2);
+                    }
+
 
                     break;
                 case 3: // Estudiante 3
