@@ -1,11 +1,19 @@
 import java.util.Random;
 import java.util.Scanner;
+
 import java.lang.Math;
+
+import java.util.*;
+
 
 public class Main {
     public static void main(String[] args) {
 
-     // Por estudiante: feature/XX-nombreTarea, con XX de 01 a 12.
+ 
+     // Por Miguel: feature/04-primeros50pares
+
+        // Por estudiante: feature/XX-nombreTarea, con XX de 01 a 12.
+ 
 
         Scanner sc = new Scanner(System.in);
         Random aleatorio = new Random();
@@ -66,10 +74,30 @@ public class Main {
                 case 3: // Estudiante 3
 
                     break;
-                case 4: // Estudiante 4
-
+                case 4: // Miguel Gañan
+                    int suma = 0;
+                    for (int i = 1; i <= 50; i++) {
+                        suma += i * 2;
+                    }
+                    System.out.println("la suma de los primeros 50 pares es : " + suma);
                     break;
                 case 5: // Estudiante 5
+                    System.out.println("OPCIÓN 5: Potencia de 2 números aleatorios 1 - 100");
+                    Random aleatorio = new Random();
+                    int n1;
+                    int n2;
+                    int min = 1;
+                    int max = 100;
+
+                    // Genera los números aleatorios
+                    n1 = aleatorio.nextInt(max - min + 1) + min;
+                    n2 = aleatorio.nextInt(max - min + 1) + min;
+
+                    // Calcula el resultado de la potencia entre los 2 números aleatorios
+                    double resultado = Math.pow (n1, n2);
+
+                    // Imprime la potencia de n1 a la n2, indicando el número generado aleatoriamente y el resultado
+                    System.out.println("Número aleatorio 1: " + n1 + "\n Número aleatorio 2: " + n2 + "\n Resultado: " + resultado);
 
                     break;
                 case 6: // Estudiante 6
@@ -77,20 +105,110 @@ public class Main {
                     break;
                 case 7: // Estudiante 7
 
+
+                    Random random = new Random();
+                    int numero = random.nextInt(100) + 1;
+                    System.out.println("El número generado es: " + numero);
+
+                    if (numero % 2 == 0) {
+                        System.out.println("El número es PAR.");
+                    } else {
+                        System.out.println("El número es IMPAR.");
+                    }
+
                     break;
                 case 8: // Estudiante 8
+                    System.out.println("8) Mayor de tres números aleatorios 1 - 200");
+                    int num1, num2, num3, mayor;
+                    Random random = new Random();
+                    //Genera un numero aleatorio entre 1 y 200
+                    num1 = random.nextInt(200)+1;
+                    num2 = random.nextInt(200)+1;
+                    num3 = random.nextInt(200)+1;
+                    System.out.println("El número 1 es = "+num1+"\nEl número 2 es = "+num2+"\nEl número 3 es = "+ num3);
+
+                    if (num1 >= num2 && num1 >= num3) {
+                        mayor = num1;
+                    } else if (num2 >= num1 && num2 >= num3) {
+                        mayor = num2;
+                    } else {
+                        mayor = num3;
+                    }
+
+                    System.out.println("El número mayor es: "+ mayor);
+
+
+
 
                     break;
                 case 9: // Estudiante 9
+                    Random random = new Random();
+                    int numeroAleatorioUno = random.nextInt(100) + 1;
+                    int numeroAleatorioDos = random.nextInt(100) + 1;
+                    int numeroAleatorioTres = random.nextInt(100) + 1;
+                    int numeroAleatorioCuatro = random.nextInt(100) + 1;
+                    while (numeroAleatorioUno % 2 == 0) {
+                        numeroAleatorioUno = random.nextInt(100) + 1;
+                    }
+                    while (numeroAleatorioDos % 2 == 0) {
 
-                    break;
+                        numeroAleatorioDos = random.nextInt(100) + 1;
+                    }
+                    while (numeroAleatorioTres % 2 == 0) {
+
+                        numeroAleatorioTres = random.nextInt(100) + 1;
+                    }
+                    while (numeroAleatorioCuatro % 2 == 0) {
+
+                        numeroAleatorioCuatro = random.nextInt(100) + 1;
+                    }
+
+                    System.out.println("Numeros aleatorios: " + numeroAleatorioUno + ", " + numeroAleatorioDos + ", " + numeroAleatorioTres + ", " + numeroAleatorioCuatro);
+                    int menor;
+
+                    if (numeroAleatorioUno < numeroAleatorioDos && numeroAleatorioUno < numeroAleatorioTres && numeroAleatorioUno < numeroAleatorioCuatro){
+                        menor = numeroAleatorioCuatro;
+                    } else if (numeroAleatorioDos < numeroAleatorioUno && numeroAleatorioDos < numeroAleatorioTres && numeroAleatorioDos < numeroAleatorioCuatro) {
+                        menor = numeroAleatorioDos;
+                    } else if (numeroAleatorioTres < numeroAleatorioUno && numeroAleatorioTres < numeroAleatorioDos && numeroAleatorioTres < numeroAleatorioCuatro) {
+                        menor = numeroAleatorioTres;
+                    } else {
+                        menor = numeroAleatorioCuatro;
+                    }
+
+                    System.out.println("El numero impar menor es: " + menor);
+
+                break;
                 case 10: // Estudiante 10
-
+                    System.out.println("Tabla de multiplicar del 1 al 20");
+                    for(int i=1; i<=20; i++) {
+                        System.out.println("\nTabla de: " + i);
+                        for (int j=1; j<=10; j++) {
+                            int result = i * j;
+                            System.out.println(i + " * " + j + " = " + result);
+                        }
+                    }
                     break;
                 case 11: // Estudiante 11
 
                     break;
                 case 12: // Estudiante 12
+                    int min=1;
+                    int max=6;
+                    int numeroMayor=0;
+                    Random aleatorio = new Random();
+                    for (int i=1; i<=10; i++)
+                    {
+                        int n= aleatorio.nextInt(max-min)+(1)+min;
+                        System.out.println("Resultado del tiro del dado "+n);
+                        if (n>numeroMayor)
+                        {
+                            numeroMayor=n;
+                        }
+
+                    }
+
+                    System.out.println("El numero ganador es : "+numeroMayor );
 
                     break;
                 case 13:
@@ -99,6 +217,7 @@ public class Main {
                 default:
                     System.out.println("Opción no válida");
             }
-        } while (opcion != 13);
+        }
+        while (opcion != 13);
     }
 }
