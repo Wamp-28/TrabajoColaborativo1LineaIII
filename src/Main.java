@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-     // Por estudiante: feature/XX-nombreTarea, con XX de 01 a 12.
+     // Por Miguel: feature/04-primeros50pares
 
         Scanner sc = new Scanner(System.in);
         int opcion;
@@ -36,8 +36,12 @@ public class Main {
                 case 3: // Estudiante 3
 
                     break;
-                case 4: // Estudiante 4
-
+                case 4: // Miguel Gañan
+                    int suma = 0;
+                    for (int i = 1; i <= 50; i++) {
+                        suma += i * 2;
+                    }
+                    System.out.println("la suma de los primeros 50 pares es : " + suma);
                     break;
                 case 5: // Estudiante 5
 
