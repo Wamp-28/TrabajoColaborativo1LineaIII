@@ -43,8 +43,38 @@ public class Main {
 
                     break;
                 case 6: // Estudiante 6
+                    
+                            Scanner sc = new Scanner(System.in);
+                            System.out.print("Ingresa un número: ");
+                            double numero = sc.nextDouble();
+                            if (numero < 0) {
+                                System.out.println("El número es negativo");
+                            }else{
+                                double raizPositiva = (numero);
+                                double raizNegativa = (numero);
 
-                    break;
+                                System.out.println("Raíz cuadrada positiva de " + numero + " es: " + raizPositiva);
+                                System.out.println("Raíz cuadrada negativa de " + numero + " es: " + raizNegativa);
+                            }
+            }
+                double inicio = 0;
+                double fin = inicio;
+                double mid = 0;
+                double precision = 0.00001;
+
+                while ((fin - inicio) > precision) {
+                    mid = (inicio + fin) / 2;
+                    if (mid * mid > inicio) {
+                        fin = mid;
+                    } else {
+                        inicio = mid;
+                    }
+                }
+                return (inicio + fin) / 2;
+
+                            }
+    }
+                                break;
                 case 7: // Estudiante 7
 
                     break;
